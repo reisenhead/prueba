@@ -3,14 +3,11 @@ package Carrrito
 class car{
     var nombreCompleto: String = ""
 
-    fun agregarCantidad(cantidad: Int) {
+    fun agregarCantidad(cantidad: ArrayList<Int>) {
         nombreCompleto += cantidad
     }
     fun agregarEsp(espacio: String) {
         nombreCompleto += espacio
-    }
-    fun agregarEspl(espaciol: String) {
-        nombreCompleto += espaciol
     }
     fun agregarNombre(nombre: String =" ") {
         nombreCompleto += nombre
@@ -18,7 +15,9 @@ class car{
     fun agregarPrecio(precio: Float) {
         nombreCompleto += precio
     }
-
+    fun agregarSigno(signo: String){
+        nombreCompleto += signo
+    }
     fun agregarStok(Stok: Int) {
         nombreCompleto += Stok
     }

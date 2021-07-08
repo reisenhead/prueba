@@ -1,7 +1,6 @@
 package Carrrito
 import Producto
 import cargar
-import java.lang.String
 
 
 fun main() {
@@ -9,17 +8,15 @@ fun main() {
     println("   Bienvenid@ a Mercado Libre      ")
 
 
-    // Funcion Carrito
-//    var i: String = "s"
-//    do {
-    println("*************************************************")
-    println("*  Desea agregar un Articulo ingrese codigo     *")
-    println("*************************************************")
     menucarrito()
 
 }
 
 fun menucarrito() {
+    println("*************************************************")
+    println("*  Desea agregar un Articulo ingrese codigo     *")
+    println("*************************************************")
+
     val productos: MutableMap<Int, Producto> = mutableMapOf()
     cargar(productos)
     val opcion2 = readLine()!!.toInt()
@@ -147,32 +144,44 @@ fun menucarrito() {
 
     val Tot = opcion3*precio1
     val nombre = car()
-    val espacios ="   "
-    val espaciosl ="       "
-    nombre.agregarEspl(espaciol= espaciosl)
-    nombre.agregarCantidad(cantidad = opcion3)
-    nombre.agregarEspl(espaciol= espaciosl)
+    val espacios ="  "
+    val espaciosl ="      "
+    val signo = "$"
+    nombre.agregarEsp(espacio= espaciosl)
+    nombre.agregarCantidad(cantidad = opc3)
+    nombre.agregarEsp(espacio= espaciosl)
     nombre.agregarNombre(nombre =names1)
-    nombre.agregarEspl(espaciol= espaciosl)
-    nombre.agregarPrecio(precio = precio1)
-    nombre.agregarEspl(espaciol= espaciosl)
-    nombre.agregarStok(Stok= stok)
-    nombre.agregarEspl(espaciol= espaciosl)
     nombre.agregarEsp(espacio= espacios)
+    nombre.agregarSigno(signo = signo)
+    nombre.agregarPrecio(precio = precio1)
+    nombre.agregarEsp(espacio= espaciosl)
+    nombre.agregarEsp(espacio= espacios)
+    nombre.agregarStok(Stok= stok)
+    nombre.agregarEsp(espacio= espaciosl)
+    nombre.agregarEsp(espacio= espacios)
+    nombre.agregarSigno(signo = signo)
     nombre.agregarTotal(total=Tot)
 
-    // }while ()
-//    menucarrito()
-//    nombre.imprimirNombre()
-//    menulinea()
-
-    var lista : ArrayList<String> = arrayListOf()
-    //lista = nombre.imprimirNombre()
-    println("*********************  Productos del carrito:    *************************")
-    println("*                                                                        *")
-    println("*  Cantidad       Articulo        Precio     Disponibles      Total  *")
+    println("*********************  Productos del carrito:    ********************************")
+    println("*                                                                               *")
+    println("*  Cantidad      Articulo                 Precio     Disponibles      Total     *")
     println(nombre.imprimirNombre())
+    println("*********************************************************************************")
+    agregarCarrrito()
 }
 fun menulinea() {
-    println("**************************************************************************")
+    println("*********************************************************************************")
+}
+fun agregarCarrrito() {
+    println("*     Deseas agregar un articulo al carrito si o no s/n                         *")
+    println("*********************************************************************************")
+    var x : String =  ""
+     x = readLine()!!.toString()
+
+    if(x == "s") {
+        menucarrito()
+    }else{
+     println("                      Regrese pronto                                          ")
+    }
+
 }
