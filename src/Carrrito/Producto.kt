@@ -1,5 +1,5 @@
 //package prueba
-//Data class
+//Data class v2
 
 data class Producto(val nombre: String, val marca:String, val categoria:String,val precio: Float, val cantidad: Int)
 
