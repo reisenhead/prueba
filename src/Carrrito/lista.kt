@@ -173,7 +173,7 @@ fun menulinea() {
     println("*********************************************************************************")
 }
 fun agregarCarrrito() {
-    println("*     Deseas agregar un articulo al carrito si o no s/n                         *")
+    println("*       Deseas agregar un articulo al carrito si o no s/n                        *")
     println("*********************************************************************************")
     var x : String =  ""
      x = readLine()!!.toString()

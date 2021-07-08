@@ -1,5 +1,5 @@
 package Carrrito
-
+//Clase carrito
 class car{
     var nombreCompleto: String = ""
 
